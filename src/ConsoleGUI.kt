@@ -4,6 +4,8 @@ fun main(){
     var firstName = readLine()
     println("Tjenare  $firstName!")
 
+    var logic = Logic(firstName.toString())
+
     do {
         println("1. Räkna tid")
         println("2. Räkna lön")
