@@ -1,0 +1,4 @@
+class Logic(firstName: String) {
+
+
+}
