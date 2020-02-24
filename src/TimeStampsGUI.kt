@@ -3,23 +3,22 @@ import java.lang.IndexOutOfBoundsException
 fun timeStampGUI(firstName:String?){
     println("Tjenare $firstName i timeStamp ange två klockslag")
     //println(validateTimeStamps(readLine()))
+    var first = ""; var second = ""
 
     try{
-        val(first, second ) = readLine()!!.split(' ')
-        if(validateTimeStamps(arrayOf(first, second)) == true){
-            println( "It's true")
-            println("$first $second")
-        }
+        var(a,b) = readLine()!!.split(' ')
+        first = a
+        second = b
     }
     catch(e: IndexOutOfBoundsException){
         println("Fail")
     }
-   /* if(validateTimeStamps(readLine()) == "Success"){
-        val(first, second ) = readLine()!!.split(' ')
+
+    if(validateInputIsTimeStamps(arrayOf(first, second)) == true){
+        println( "It's true")
         println("$first $second")
-    } else{
-        println("Fel inmatning!")
-    }*/
+    }
+
     return
 }
 
