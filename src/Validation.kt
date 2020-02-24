@@ -1,11 +1,6 @@
-import java.lang.IndexOutOfBoundsException
 
-fun validateTimeStamps(input: String?):String {
-    return try{
-        input!!.split(' ')
-        "Success"
-    }
-    catch(e: IndexOutOfBoundsException){
-        "Fail"
-    }
+
+fun validateTimeStamps(inputs: Array<String>): Boolean? {
+    return inputs.all { it.matches(Regex("[0-2][0-9]:[0-9][0-9]")) }
+
 }

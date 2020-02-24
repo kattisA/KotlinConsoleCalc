@@ -6,11 +6,10 @@ fun timeStampGUI(firstName:String?){
 
     try{
         val(first, second ) = readLine()!!.split(' ')
-        val matches = first.matches(Regex("[0-2][0-9]:[0-9][0-9]"))
-        println(matches)
-        println( "Success")
-        println("$first $second")
-
+        if(validateTimeStamps(arrayOf(first, second)) == true){
+            println( "It's true")
+            println("$first $second")
+        }
     }
     catch(e: IndexOutOfBoundsException){
         println("Fail")
