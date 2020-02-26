@@ -1,12 +1,12 @@
 import java.lang.IndexOutOfBoundsException
 
 fun timeStampGUI(firstName:String?){
+
     println("Tjenare $firstName i timeStamp ange två klockslag")
-    //println(validateTimeStamps(readLine()))
     var first = ""; var second = ""
 
     try{
-        var(a,b) = readLine()!!.split(' ')
+        val (a,b) = readLine()!!.split(' ')
         first = a
         second = b
     }
@@ -15,6 +15,8 @@ fun timeStampGUI(firstName:String?){
     }
 
     if(validateInputIsTimeStamps(arrayOf(first, second)) == true){
+        var logic = TimeLogic()
+        println(logic.timeBetweenTimeStamps(first, second))
         println( "It's true")
         println("$first $second")
     }
